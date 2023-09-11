@@ -1,21 +1,39 @@
 import React from "react";
-import Image from "../assets/avatar.svg";
+import Image from "../assets/avatar.jpg";
+import cf from "../assets/codeforces.svg";
+import interviewbit from "../assets/interviewbit.svg";
+import leetcode from "../assets/leetcode.svg";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-// import { motion } from "framer-motion";
-// import { fadeIn } from "../variants";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const Banner = () => {
   return (
-    <section className="section" id="home">
+    <section
+      className="min-h-[85vh] lg:min-h-[78vh] flex items-center mt-11"
+      id="home"
+    >
       <div className="container mx-auto">
-        <div>
+        <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
           {/* Text */}
-          <div>
-            <h1>
+          <div className="flex-1 text-center font-secondary lg:text-left">
+            <motion.h1
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="text-[55px] mb-4 font-bold leading-[0.8] lg:text-[95px]"
+            >
               Khaliq <span>Hussain</span>
-            </h1>
-            <div className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]">
+            </motion.h1>
+            <motion.div
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="mb-6 text-[36px] lg:text-[55px] font-secondary font-semibold uppercase leading-[1]"
+            >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
                 sequence={[
@@ -31,33 +49,99 @@ const Banner = () => {
                 wrapper="span"
                 repeat={Infinity}
               />
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus commodi illo nisi doloribus. Unde enim fugiat eaque
-              neque quae tempore!
-            </p>
-            <button className="btn btn-lg">Contact me</button>
-            <a href="/" className="text-gradient btn-link">
-              My Portfolio
-            </a>
+            </motion.div>
+            <motion.p
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="mb-8 max-w-lg mx-auto lg:mx-0"
+            >
+              Hello, I'm Khaliq Hussain, a final year BTech CSE student at MNNIT
+              Allahabad. Welcome to my portfolio website, your hub for
+              information about me.
+            </motion.p>
+            <motion.div
+              variants={fadeIn("up", 0.6)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
+            >
+              <button className="btn btn-lg">
+                <a
+                  href="mailto:khaliq.hussain.0007@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex">
+                    <FaEnvelope className="mt-1 mr-2" />
+                    Contact me
+                  </div>
+                </a>
+              </button>
+              <a
+                href="https://www.linkedin.com/in/khaliqhussain/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="flex">
+                  <FaLinkedin className="mt-1.5 mr-2" />
+                  LinkedIn
+                </div>
+              </a>
+            </motion.div>
+            {/* Socials */}
+            <motion.div
+              variants={fadeIn("up", 0.7)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              className="flex text-[20px] gap-x-6 max-w-max ml-16"
+            >
+              <a
+                href="https://github.com/Khaliq-786"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://codeforces.com/profile/zestypratyush"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="h-6 mb-4" src={cf} alt="" />
+              </a>
+
+              <a
+                href="https://leetcode.com/desmond_miles_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="h-6 mb-4" src={leetcode} alt="" />
+              </a>
+
+              <a
+                href="https://www.interviewbit.com/profile/desmond_miles_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="h-6 mb-4" src={interviewbit} alt="" />
+              </a>
+            </motion.div>
           </div>
-          {/* Socials */}
-          <div className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0">
-            <a href="/">
-              <FaEnvelope />
-            </a>
-            <a href="/">
-              <FaGithub />
-            </a>
-            <a href="/">
-              <FaLinkedin />
-            </a>
-          </div>
+
           {/* Image */}
-          <div>
-            <img className="h-56 ml-10" src={Image} alt="My Pic" />
-          </div>
+          <motion.div
+            variants={fadeIn("down", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
+          >
+            <img className="h-80 mb-24 ml-40" src={Image} alt="My Pic" />
+          </motion.div>
         </div>
       </div>
     </section>
