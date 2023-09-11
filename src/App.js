@@ -7,7 +7,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-import Academics from "./components/Academic";
+import Academics from "./components/Academics";
 
 const App = () => {
   return (
