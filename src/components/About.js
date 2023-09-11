@@ -3,6 +3,7 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { FaGithub } from "react-icons/fa";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -11,7 +12,7 @@ const About = () => {
 
   return (
     <section className="section" id="about" ref={ref}>
-      <div className="container mx-atuo">
+      <div className="container mx-atuo ml-24">
         <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
           {/* img */}
           <motion.div
@@ -31,13 +32,17 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I'm a Full stack web developer with command over MERN stack and
-              various other frameworks such as tailwind, React,etc.
+              I'm a coder, developer, cybersecurity researcher !
             </h3>
             <p className="mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-              quia facere quo, voluptatibus ipsa deleniti, officia ipsam
-              temporibus veniam ut animi iure maiores adipisci suscipit?
+              I'm a competitive coder with a Codeforces rating of 1272, a
+              full-stack developer with over 10 projects, including 3 full-stack
+              projects. My expertise lies in data structures and algorithms,
+              with a portfolio of 600+ solved problems across various platforms.
+              Additionally, I have a strong foundation in core computer science
+              subjects. You can find more details about my technical skills in
+              the dedicated section below. Currently, I'm actively seeking a
+              full-time Software Development Engineer (SDE) role.
             </p>
             {/* stats */}
             <div className="flex gap-x-6 lg:gap-x-10 mb-12">
@@ -53,7 +58,7 @@ const About = () => {
               </div>
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={5} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={10} duration={3} /> : null}+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Projetcs <br />
@@ -71,9 +76,25 @@ const About = () => {
               </div>
             </div>
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
+              <a
+                href="https://github.com/Khaliq-786"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn btn-lg">
+                  <div className="flex justify-center items-center">
+                    <FaGithub className="mr-2" />
+                    View Github
+                  </div>
+                </button>
+              </a>
+              <a
+                href="https://drive.google.com/drive/folders/1_kut4TtP0xWN_2_93Uv3a8UOZjHm4VDJ?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gradient btn-link"
+              >
+                View Certificates
               </a>
             </div>
           </motion.div>
