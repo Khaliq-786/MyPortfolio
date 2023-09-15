@@ -15,14 +15,21 @@ const Work = () => {
             <div>
               <h2 className="h2 leading-tight text-accent">
                 My Latest <br />
-                Work.
+                Projects.
               </h2>
               <p className="max-w-sm mb-10">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
                 sequi corrupti dolorem suscipit facere nisi molestiae fuga quos
                 iure veniam!sassasasasasasadvregergref
               </p>
-              <button className="btn btn-sm">View all projects</button>
+              <button
+                onClick={() => {
+                  window.open("https://github.com/Khaliq-786?tab=repositories");
+                }}
+                className="btn btn-sm"
+              >
+                View all projects
+              </button>
             </div>
             {/* image */}
             <motion.div
@@ -41,12 +48,14 @@ const Work = () => {
                 alt=""
               />
               {/* pretitle */}
-              <div className="absolute -bottom-full left-1/2 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">UI/UX Design</span>
+              <div className="absolute -bottom-full left-1/2 group-hover:bottom-32 transition-all duration-500 z-50">
+                <span className="text-gradient text-3xl">Minder</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-1/2 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-lg text-white">
+                  MNNIT’s very own dating-cum-social media platform
+                </span>
               </div>
             </motion.div>
           </div>
@@ -68,12 +77,14 @@ const Work = () => {
                 alt=""
               />
               {/* pretitle */}
-              <div className="absolute -bottom-full left-1/2 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">UI/UX Design</span>
+              <div className="absolute -bottom-full left-1/2 group-hover:bottom-32 transition-all duration-500 z-50">
+                <span className="text-gradient text-3xl">Crypto-Mate</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-1/2 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-lg text-white">
+                  Your Real-Time Crypto Exchange & News Hub
+                </span>
               </div>
             </motion.div>
             {/* image */}
@@ -82,7 +93,7 @@ const Work = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
-              className="group relative overflow-hidden border-2 border-white/50 rounded-xl"
+              className="group relative overflow-hidden border-2 border-white/50 rounded-xl mt-7"
             >
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
@@ -93,12 +104,15 @@ const Work = () => {
                 alt=""
               />
               {/* pretitle */}
-              <div className="absolute -bottom-full left-1/2 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">UI/UX Design</span>
+              <div className="absolute -bottom-full left-1/2 group-hover:bottom-40 transition-all duration-500 z-50">
+                <span className="text-gradient text-3xl">RAY</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-1/2 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-lg text-white">
+                  A line and wall follwoing bot built using arduino board and
+                  various sensors.
+                </span>
               </div>
             </motion.div>
           </div>
