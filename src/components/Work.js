@@ -33,11 +33,15 @@ const Work = () => {
             </div>
             {/* image */}
             <motion.div
+              onClick={() => {
+                window.open("https://github.com/Khaliq-786/Minder");
+                window.open("https://github.com/Khaliq-786/Minder-backend/");
+              }}
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
-              className="group relative overflow-hidden border-2 border-white/50 rounded-xl"
+              className="group relative overflow-hidden border-2 border-white/50 rounded-xl hover:cursor-pointer"
             >
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
@@ -62,11 +66,14 @@ const Work = () => {
           <div className="flex-1 flex flex-col gap-y-10 lg:mb-0">
             {/* image */}
             <motion.div
+              onClick={() => {
+                window.open("https://github.com/Khaliq-786/crypto-mate-1");
+              }}
               variants={fadeIn("left", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
-              className="group relative overflow-hidden border-2 border-white/50 rounded-xl"
+              className="group relative overflow-hidden border-2 border-white/50 rounded-xl hover:cursor-pointer"
             >
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
@@ -89,11 +96,14 @@ const Work = () => {
             </motion.div>
             {/* image */}
             <motion.div
+              onClick={() => {
+                window.open("https://github.com/Khaliq-786/RAY");
+              }}
               variants={fadeIn("left", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
-              className="group relative overflow-hidden border-2 border-white/50 rounded-xl mt-7"
+              className="group relative overflow-hidden border-2 border-white/50 rounded-xl mt-7 hover:cursor-pointer"
             >
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
